@@ -6,8 +6,11 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-
-        
+ if(message.content.indexOf( process.env.prefix) !== 0) return;
+    
+   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+    
+    
    if (message.content === ">ladder") {
     	message.channel.send('\n __*Are there any requirements for ladder?*__ \
         \n -There are no entrance fee or requirements.  You can play as many times as you want each day. \
