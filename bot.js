@@ -6,11 +6,11 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    //if(message.author.bot) return;
+    if(message.author.bot) return;
     
     
-   // if (message.content === 'ping') {
-    //	message.reply('pong');
+    if (message.content === 'ping') {
+    	message.reply('pong');
         
    if (message.content === ">ladder") {
     	message.channel.send('\n __*Are there any requirements for ladder?*__ \
