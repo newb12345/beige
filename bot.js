@@ -5,11 +5,8 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-client.on('message', message => {
- if(message.content.indexOf( process.env.prefix) !== 0) return;
-    
-   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
-    
+client.on('message', async message => {
+
     
    if (message.content === ">ladder") {
     	message.channel.send('\n __*Are there any requirements for ladder?*__ \
