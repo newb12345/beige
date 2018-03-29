@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     console.log('I am ready!');
-    clien.user.setUsername("Krunky");
+    client.user.setUsername("Krunky");
 });
 
  client.on("message", async message => {
