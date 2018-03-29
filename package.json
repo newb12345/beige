@@ -1,12 +1,13 @@
 {
-  "name": "Beige#7628",
-  "version": "1.0.0",
-  "description": "My own Discord bot",
+  "name": "Test",
+  "description": "Test",
+  "version": "0.0.0",
   "main": "bot.js",
-  "author": "May",
+  "scripts": {
+    "start": "node bot.js"
+  },
   "dependencies": {
-    "discord.io": "^2.5.3",
-    "discord.js": "^11.3.2",
-    "winston": "^2.4.1"
+    "discord.js": "11.1.0",
+    "request": "2.81.0"
   }
 }
