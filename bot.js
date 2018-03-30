@@ -41,7 +41,9 @@ client.on('message', async message => {
 // for reading text         
        
        if(command === "help") {
+           message.channel.send("On construction...");
            message.channel.send(help);
+           message.channel.send("--;");
        }
          
   }
