@@ -46,6 +46,11 @@ client.on('message', async message => {
       if (command === "readtip") {
          var read = fs.readFileSync("./source/tips.txt", {"encoding": "utf-8"});
 	     message.channel.send(read);
+	      
+	fs.writeFile('helloworld.txt', 'Hello World!', function (err) {
+		  if (err) return console.log(err);
+	  console.log('Hello World > helloworld.txt');
+			});
         } 
 	
 
