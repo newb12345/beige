@@ -6,8 +6,8 @@ client.on('ready', () => {
 });
 
 client.on('message', async message => {
-    
-  if(message.author.bot) return;
+    //botception
+     if(message.author.bot) return;
     
 //prefix = ">"
   if(message.content.indexOf(process.env.prefix) !== 0) return;
@@ -36,6 +36,13 @@ client.on('message', async message => {
     message.delete().catch(O_o=>{}); 
     // And we get the bot to say the thing: 
     message.channel.send(sayMessage);
+// for reading text         
+    var fs = require("fs");
+    var help = fs.readFileSync("./help.txt", {"encoding": "utf-8"});        
+       if(command === "help") {
+           message.channel.send(help);
+       }
+         
   }
     
 });
