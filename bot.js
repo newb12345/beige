@@ -59,14 +59,28 @@ const categ = ["ladder", "club", "roadshow", "song"];
 	if (command === "readtip") {
 		let cat = args[0];
 		  if(!cat)
-   			   return message.reply("Choose which tip you want to view: .");
-         var tips = fs.readFileSync("./source/tips.txt", {"encoding": "utf-8"});
-	     message.channel.send(tips);
+   			   return message.reply("Choose first which tip you want to view :" + (categ));
+		if(!categ.some(word => message.content.includes(word))) 
+ 			return message.reply("Category should be one of these:" + (categ));
+		switch(cat) {
+          	  // !ping
+          	  case 'ladder':
+			var tips = fs.readFileSync("./source/tips.txt", {"encoding": "utf-8"});
+			message.channel.send(tips);
+          		 break;
+		case 'club':
+			var tips = fs.readFileSync("./source/help.txt", {"encoding": "utf-8"});
+			message.channel.send(tips);
+          		 break;	
+            // Just add any case commands if you want to..
+     		   }
+
+	     
         }
 	if (command === "addtip"){
 	 	let cat = args[0];
 		   if(!cat)
-   			   return message.reply("Eyyy...Choose what category is the tip first.");
+   			   return message.reply("Eyyy...Choose what category is the tip you want to view first.");
 		let tip = args.slice(1).join(' ');
 			  if(!tip)
    			   return message.reply("Ya! You forgot to include the tip!");
@@ -76,7 +90,7 @@ const categ = ["ladder", "club", "roadshow", "song"];
 		
 	 message.channel.send("Thanks! Your tip will be added after the mods read it. ^^");
 	var member=398297283831136256;
-        message.member.send("Category:"+ (cat) ); // send that user a DM
+        message.member.send("Category:  "+ (cat) ); // send that user a DM
 	message.member.send(" Tip: " + (tip) +" by " + (  message.author.username  ));
 		
 	
