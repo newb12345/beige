@@ -53,9 +53,13 @@ client.on('message', async message => {
 	     message.channel.send(tips);
         }
 	if (command === "addtip"){
+	 	let cat = args[0];
+		   if(!cat)
+   			   return message.reply("Eyyy...Choose what category is the tip first.");
 		let tip = args.slice(1).join(' ');
 			  if(!tip)
    			   return message.reply("Ya! You forgot to include the tip!");
+		
 	 message.channel.send("Thanks! Your tip will be added after the mods read it. ^^");	
 	}
     
