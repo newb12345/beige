@@ -21,7 +21,7 @@ client.on('message', async message => {
         }
       if (message.content === "hello") {
           message.reply('hi~');
-         message(process.env.prefix);
+         message.channel.send(process.env.prefix);
   	}
 });
 
