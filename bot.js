@@ -78,10 +78,7 @@ client.on('message', async message => {
                 sql.run("INSERT INTO addtips (category, suggestion, creator) VALUES (?, ?, ?)", [cat , tip , message.author.id]);
          });
 	message.channel.send("Adding tips succesful!");
-
-	    
-   
-	 message.channel.send("--!");     
+	 
   } 
 //*
  
