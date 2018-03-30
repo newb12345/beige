@@ -1,8 +1,5 @@
 _You can use me like this:_
 
-_>hello_
-  I'll greet you too ^^
-_>ladder_  
-  Tips about ladder
-_>say [text]_
-  Make me say something
+[_>hello_] ==> I'll greet you too ^^
+[_>ladder_]  ==> FAQs about ladder
+[_>say [text]_] ==> Make me say something
