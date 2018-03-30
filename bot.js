@@ -67,11 +67,15 @@ client.on('message', async message => {
 		let tip = args.slice(1).join(' ');
 			  if(!tip)
    			   return message.reply("Ya! You forgot to include the tip!");
+	const categ = ["ladder", "club", "roadshow", "song"];
+	if(!categ.some(word => message.content.includes(word))) 
+ 		return ("Category should be one of these: ladder, club, roadshow, song.");
 		
 	 message.channel.send("Thanks! Your tip will be added after the mods read it. ^^");
 	var member=398297283831136256;
         message.member.send("Category:"+ (cat) ); // send that user a DM
 	message.member.send(" Tip: " + (tip) +" by " + (  message.author.username  ));
+		
 	
 	}
 
