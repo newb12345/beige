@@ -22,7 +22,7 @@ client.on('message', async message => {
 		} 
 //prefix = ">"
   if(message.content.indexOf(process.env.prefix) !== 0) return;
-const categ = ["ladder", "club", "roadshow", "song"];
+const categ = ["ladder", "club", "roadshow", "others"];
   const args = message.content.slice(process.env.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   //faq's on ladder  
@@ -76,8 +76,8 @@ const categ = ["ladder", "club", "roadshow", "song"];
 			var tips = fs.readFileSync("./source/tips_roadshow.txt", {"encoding": "utf-8"});
 			message.channel.send(tips);
           		 break;	
-		case 'song':
-			var tips = fs.readFileSync("./source/tips_roadshow.txt", {"encoding": "utf-8"});
+		case 'others':
+			var tips = fs.readFileSync("./source/tips_others.txt", {"encoding": "utf-8"});
 			message.channel.send(tips);
           		 break;	
             // Just add any case commands if you want to..
