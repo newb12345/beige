@@ -70,7 +70,7 @@ client.on('message', async message => {
 		
 	 message.channel.send("Thanks! Your tip will be added after the mods read it. ^^");
 	var member=398297283831136256;
-        message.member.send("Category: ${cat} - ${tip} by ${message.author.username}"); // send that user a DM
+        message.member.send("Category:"+ (cat) ); // send that user a DM
 	
 	}
 
