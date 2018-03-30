@@ -1,13 +1,11 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 //sql
-//const sql = require("sqlite");
-//sql.open("./addtips.sqlite");
+const sql = require("sqlite");
+sql.open("./addtips.sqlite");
 
 var fs = require('fs');
 
-var sqlite3 = require('sqlite3').verbose();
-var db = new sqlite3.Database(':memory:');
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -53,42 +51,35 @@ client.on('message', async message => {
          }
 	
 
- if (command === "table"){
-  db.serialize(function() {
-  db.run("CREATE TABLE lorem (info TEXT)");
- 
-  var stmt = db.prepare("INSERT INTO lorem VALUES (?)");
-  for (var i = 0; i < 10; i++) {
-      stmt.run("Ipsum " + i);
-  }
-  stmt.finalize();
- 
-  db.each("SELECT rowid AS id, info FROM lorem", function(err, row) {
-      messge.channel.send(row.id + ": " + row.info);
-  });
-});
- 
-db.close();	
- }	
 	
 	
-/*
+
   //reading and adding tips  
       if (command === "readtip") {
+	     let tip = args.slice(1).join(' ');
+	     
 	      let cat = args[0];
+	       
          var read = fs.readFileSync("./source/tips.txt", {"encoding": "utf-8"});
 	     message.channel.send(read);
-
+	      
+	/*
  	sql.get(`SELECT * FROM addtips WHERE category ="${cat}"`).then(row => {
             message.channel.send(`Tips in ${cat}: ${row.suggestion}`)
        		 });	     
-	 sql.get("SELECT * FROM addtips", function (err, result, fields) {
-    			if (err) throw err;
-    		message.channel.send(result);
-  		});
+	*/
         } 
+	if command === "addtip") {
+		 let tip = args.slice(1).join(' ');
+		  if(!tip)
+   			   return message.reply("Ya! You forgot to include the tip!");
+	 	 let cat = args[0];
+		   if(!cat)
+   			   return message.reply("Eyyy...Choose what category is the tip first.");
+		message.channel.send("Thanks! Your tip will be added after the moderators read it. :D");
+	}
 	
-	
+/*	
 	
 // this whole block is for sqlite
  if (command === "addtip") {
