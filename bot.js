@@ -1,5 +1,17 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+var mysql = require('mysql');
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "Beige",
+  password: "krunky"
+});
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+});
+
+
 var fs = require('fs');
 
 client.on('ready', () => {
@@ -48,14 +60,27 @@ client.on('message', async message => {
 	     message.channel.send(read);
         } 
 	
-      if (command === "addtip") {
-	const mytip = args.join(" ");
-        fs.writeFile("./source/start.txt", mytip , function (err) {
+ //     if (command === "addtip") {
+//	const mytip = args.join(" ");
+  //      fs.writeFile("./source/start.txt", mytip , function (err) {
 		// Checks if there is an error
-    			if (err) return console.log(err);
- 			 });
+   // 			if (err) return console.log(err);
+ //			 });
 	      
-        }   
+    //    }
+	
+	if (command === "querysql"){
+			con.connect(function(err) {
+			  if (err) throw err;
+  				message.channel.send("Connected!");
+ 			 con.query(sql, function (err, result) {
+   			 if (err) throw err;
+  			  message.channel.send("Result: " + result);
+ 		 });
+			}
+});
+		
+	}
     
  
          
