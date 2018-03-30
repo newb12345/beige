@@ -1,5 +1,5 @@
 
-_You can use me like this:_
+__You can use me like this:__
 ```css
 
  >hello ==> I'll greet you too ^^
@@ -12,7 +12,7 @@ __ Available categories for now:__
 ``` -ladder    -club    -roadshow   -ranking -others  ```
 
  __Under construction:__
-``` >roadshow ==> FAQs about ladder
+```css >roadshow ==> FAQs about ladder
  >nhr  ==> FAQs about NHR
  >club ==> FAQs about club
  >collection ==> FAQs about collection
@@ -25,9 +25,6 @@ __ Available categories for now:__
  >krunkdorm ==> FAQs about krunk dorm
  >shop ==> FAQs about NHR,Roadshow,and Club shops
  ```
- 
- 
- 
  
  FYI, I don't tolerate bad words so I delete them when I see them. XD
  Try me now at the channel. ^^
