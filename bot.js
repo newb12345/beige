@@ -19,7 +19,7 @@ client.on('message', async message => {
         \n -No, the songs are pre-determined and one random one will be picked from the song list. \
         \n\n **Source** - https://www.taptap.com/topic/2666165 \n'); 	
         }
-      if (message.content === "hello") {
+      if (message.content === "+hello") {
           message.reply('hi~');
   	}
 });
