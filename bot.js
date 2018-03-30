@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var fs = require('fs');
-var help = fs.readFileSync("./help.txt", {"encoding": "utf-8"});  
+//var fs = require('fs');
+//var help = fs.readFileSync("./help.txt", {"encoding": "utf-8"});  
 
 client.on('ready', () => {
     console.log('I am ready!');
