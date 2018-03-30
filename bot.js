@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 //sql
-//const sql = require("sqlite");
-//sql.open("./tips.sqlite");
+const sql = require("sqlite");
+sql.open("./addtips.sqlite");
 
 var fs = require('fs');
 
@@ -55,23 +55,22 @@ client.on('message', async message => {
 	
 // this whole block is for sqlite
  if (command === "addtip") {
-	  let tips = args.slice(1).join(' ');
-	  let category = args[0];
-	 message.channel.send(category);
-	 message.channel.send("------");
-	 message.channel.send(tips);
-	 /*
-sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
-      sql.run("INSERT INTO scores (category, tips, member) VALUES (?, ?, ?)", [message.author.id, 1, 0]);
-  }).catch(() => {
-    console.error;
-    sql.run("CREATE TABLE IF NOT EXISTS tips (category TEXT, tips TEXT, member TEXT)").then(() => {
-      sql.run("INSERT INTO scores (userId, points, level) VALUES (?, ?, ?)", [message.author.id, 1, 0]);
-    });
-  });
-});
-*/
+	  let tip = args.slice(1).join(' ');
+	  let cat = args[0];
+	sql.get(`SELECT * FROM addtips WHERE creator = "${message.author.id}"`).then(row => {
+		if (!row) { // Can't find the row.
+		  sql.run("INSERT INTO addtips (category, suggestion, creator) VALUES (?, ?, ?)", [cat, tip, message.author.id]);
+			} else { // Can find the row.
+		  sql.run("INSERT INTO addtips (category, suggestion, creator) VALUES (?, ?, ?)", [cat, tip, message.author.id]);
+			}
+		}).catch(() => {
 
+		});
+		console.error; // Gotta log those errors
+                sql.run("CREATE TABLE IF NOT EXISTS addtips (category TEXT, suggestion TEXT, creator TEXT)").then(() => {
+                sql.run("INSERT INTO addtips (category, suggestion, creator) VALUES (?, ?, ?)", [cat , tip , message.author.id]);
+         });
+	message.channel.send("Adding tips succesful!");
   } 
 //*
  
