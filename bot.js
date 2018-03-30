@@ -22,7 +22,7 @@ client.on('message', async message => {
 		} 
 //prefix = ">"
   if(message.content.indexOf(process.env.prefix) !== 0) return;
-
+const categ = ["ladder", "club", "roadshow", "song"];
   const args = message.content.slice(process.env.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   //faq's on ladder  
@@ -57,6 +57,9 @@ client.on('message', async message => {
 	
 	
 	if (command === "readtip") {
+		let cat = args[0];
+		  if(!cat)
+   			   return message.reply("Choose which tip you want to view: .");
          var tips = fs.readFileSync("./source/tips.txt", {"encoding": "utf-8"});
 	     message.channel.send(tips);
         }
@@ -67,9 +70,9 @@ client.on('message', async message => {
 		let tip = args.slice(1).join(' ');
 			  if(!tip)
    			   return message.reply("Ya! You forgot to include the tip!");
-	const categ = ["ladder", "club", "roadshow", "song"];
+	
 	if(!categ.some(word => message.content.includes(word))) 
- 		return message.reply("Category should be one of these: ladder, club, roadshow, song.");
+ 		return message.reply("Category should be one of these:" + (categ));
 		
 	 message.channel.send("Thanks! Your tip will be added after the mods read it. ^^");
 	var member=398297283831136256;
