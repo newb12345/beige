@@ -1,7 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var fs = require('fs');
-var help = fs.readFileSync("./source/help.txt", {"encoding": "utf-8"});  
+var help = fs.readFileSync("./source/help.txt", {"encoding": "utf-8"}); 
+
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -16,15 +17,10 @@ client.on('message', async message => {
     
   const args = message.content.slice(process.env.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-    
+  //faq's on ladder  
    if (command === "ladder") {
-    	message.channel.send('\n __*Are there any requirements for ladder?*__ \
-        \n -There are no entrance fee or requirements.  You can play as many times as you want each day. \
-        \n\n __*How often are the songs updated?*__ \
-        \n -Once every 48 hours.  It is worth mentioning that the songs will contain Platinum-only songs, so non-Platinum members get to experience them too. \
-        \n\n __*Can we pick the song(s) we want to play?*__ \
-        \n -No, the songs are pre-determined and one random one will be picked from the song list. \
-        \n\n **Source** - https://www.taptap.com/topic/2666165 \n'); 	
+         var lad = fs.readFileSync("./source/ladder.txt", {"encoding": "utf-8"});
+	     message.channel.send(lad);
         }
     
       if (command === "hello") {
