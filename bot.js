@@ -1,5 +1,9 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+//sql
+const sql = require("sqlite");
+sql.open("./tips.sqlite");
+
 var fs = require('fs');
 
 client.on('ready', () => {
@@ -46,14 +50,27 @@ client.on('message', async message => {
       if (command === "readtip") {
          var read = fs.readFileSync("./source/tips.txt", {"encoding": "utf-8"});
 	     message.channel.send(read);
-	      
-	fs.writeFile('helloworld.txt', 'Hello World!', function (err) {
-		  if (err) return console.log(err);
-	  console.log('Hello World > helloworld.txt');
-			});
+
         } 
 	
+// this whole block is for sqlite
+ if (command === "addtip") {
+	  let tips = args.slice(1).join(' ');
+	 message.channel.send(tips);
+	 /*
+sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
+      sql.run("INSERT INTO scores (category, tips, member) VALUES (?, ?, ?)", [message.author.id, 1, 0]);
+  }).catch(() => {
+    console.error;
+    sql.run("CREATE TABLE IF NOT EXISTS tips (category TEXT, tips TEXT, member TEXT)").then(() => {
+      sql.run("INSERT INTO scores (userId, points, level) VALUES (?, ?, ?)", [message.author.id, 1, 0]);
+    });
+  });
+});
+*/
 
+  } 
+//*
  
          
 
