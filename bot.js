@@ -26,9 +26,59 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
   const args = message.content.slice(process.env.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   //faq's on ladder  
-      if (command === "ladder") {
-         var lad = fs.readFileSync("./source/ladder.txt", {"encoding": "utf-8"});
-	     message.channel.send(lad);
+    switch(command) {
+		case 'ladder':    
+         		var com = fs.readFileSync("./source/ladder.txt", {"encoding": "utf-8"});
+	   		message.channel.send(com);
+		    break;
+		case 'roadshow':    
+         		var com = fs.readFileSync("./source/roadshow.txt", {"encoding": "utf-8"});
+	   		message.channel.send(com);
+		    break;
+		case 'nhr':    
+         		var com = fs.readFileSync("./source/nhr.txt", {"encoding": "utf-8"});
+	   		message.channel.send(com);
+		    break;
+		case 'club':    
+         		var com = fs.readFileSync("./source/club.txt", {"encoding": "utf-8"});
+	   		message.channel.send(com);
+		  	  break;
+		 case 'collection':    
+         		var com = fs.readFileSync("./source/collection.txt", {"encoding": "utf-8"});
+	   		message.channel.send(com);
+		   	 break;
+		 case 'events':    
+         		var com = fs.readFileSync("./source/events.txt", {"encoding": "utf-8"});
+	   		message.channel.send(com);
+		   	 break;
+		 case 'achievements':    
+         		var com = fs.readFileSync("./source/achievements.txt", {"encoding": "utf-8"});
+	   		message.channel.send(com);
+		   	 break;
+		 case 'training':    
+         		var com = fs.readFileSync("./source/training.txt", {"encoding": "utf-8"});
+	   		message.channel.send(com);
+		   	 break;
+		 case 'ranking':    
+         		var com = fs.readFileSync("./source/ranking.txt", {"encoding": "utf-8"});
+	   		message.channel.send(com);
+		   	 break;
+		 case 'management':    
+         		var com = fs.readFileSync("./source/management.txt", {"encoding": "utf-8"});
+	   		message.channel.send(com);
+		   	 break;   
+	         case 'schedule':    
+         		var com = fs.readFileSync("./source/schedule.txt", {"encoding": "utf-8"});
+	   		message.channel.send(com);
+		   	 break; 
+		 case 'krunkdorm':    
+         		var com = fs.readFileSync("./source/krunkdorm.txt", {"encoding": "utf-8"});
+	   		message.channel.send(com);
+		   	 break; 
+		  case 'shop':    
+         		var com = fs.readFileSync("./source/shop.txt", {"encoding": "utf-8"});
+	   		message.channel.send(com);
+		   	 break; 		    
         }
 //help command
       if(command === "h") {
