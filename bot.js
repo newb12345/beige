@@ -76,7 +76,7 @@ client.on('message', async message => {
 	message.channel.send("Adding tips succesful!");
 	sql.get(`SELECT * FROM addtips WHERE creator ="${message.author.id}"`).then(row => {
            if (!row) return message.reply("No tips yet. You might want to add one! :D");
-              message.reply("TT ${row.creator}");
+              message.reply("TT ${category} ${row.suggestion}");
 	    
     });
 	 message.channel.send("--!");     
