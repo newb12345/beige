@@ -52,9 +52,13 @@ client.on('message', async message => {
          var read = fs.readFileSync("./source/tips.txt", {"encoding": "utf-8"});
 	     message.channel.send(read);
 	
-	sql.each(`SELECT * FROM addtips WHERE category = "${cat}"`).then(row => {
-           if (!row) return message.reply("No tips yet. You might want to add one! :D");
-	    message.channel.send(`Tips in ladder: ${row.suggestion}`);     }); 
+	let samp = `SELECT * FROM addtip WHERE category=? ORDER BY creator`;
+ 	sql.each(samp, ['${cat}'], (err, row) => {
+  			if (err) {
+ 			   throw err;
+				  }
+		  message.channel.send(`${row.category} - ${row.suggestion} by ${row.creator}`);
+		});
 
 
         } 
