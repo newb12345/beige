@@ -1,8 +1,33 @@
 
 _You can use me like this:_
 ```css
+
  >hello ==> I'll greet you too ^^
  >ladder  ==> FAQs about ladder
- >say [text] ==> Make me say something[mod&admin only]```
+ >say [text] ==> Make me say something[mod&admin only]
+ >readtip [category] ==> Read the tips given by users according to category.
+ >addtip [category] [tips] ==> Add tips you know to help others. ^^ Tag according to category of the tip
+                           ==> It will not be added automatically. The mod will check it first. ><```
+__ Available categories for now:__
+``` -ladder    -club    -roadshow   -song  ```
+
+ __Under construction:__
+``` >roadshow ==> FAQs about ladder
+ >nhr  ==> FAQs about NHR
+ >club ==> FAQs about club
+ >collection ==> FAQs about collection
+ >events ==> FAQs about events
+ >achievements ==> FAQs about achievements
+ >training ==> FAQs about training room
+ >ranking ==> FAQs about ranking 
+ >management ==> FAQs about levelling,evolutions, promotions, etc...
+ >schedule ==> FAQs about schedule
+ >krunkdorm ==> FAQs about krunk dorm
+ >shop ==> FAQs about NHR,Roadshow,and Club shops
+ ```
  
+ 
+ 
+ 
+ FYI, I don't tolerate bad words so I delete them when I see them. XD
  Try me now at the channel. ^^
