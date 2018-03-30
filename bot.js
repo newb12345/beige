@@ -8,6 +8,7 @@ client.on('ready', () => {
 client.on('message', async message => {
 //const prefix = "+"
  // if(message.content.indexOf(config.prefix) !== 0) return;
+   
     
    if (message.content === ">ladder") {
     	message.channel.send('\n __*Are there any requirements for ladder?*__ \
@@ -20,6 +21,7 @@ client.on('message', async message => {
         }
       if (message.content === "hello") {
           message.reply('hi~');
+         message(process.env.prefix);
   	}
 });
 
