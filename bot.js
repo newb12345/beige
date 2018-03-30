@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var fs = require('fs');
-var help = fs.readFileSync("./source/help.txt", {"encoding": "utf-8"}); 
+
 
 
 client.on('ready', () => {
@@ -22,14 +22,17 @@ client.on('message', async message => {
          var lad = fs.readFileSync("./source/ladder.txt", {"encoding": "utf-8"});
 	     message.channel.send(lad);
         }
+//help command
       if(command === "h") {
+	  var help = fs.readFileSync("./source/help.txt", {"encoding": "utf-8"}); 
            message.delete().catch(O_o=>{}); 
            message.author.send(help);
        }    
-	
+//make beige greet you	
       if (command === "hello") {
           message.reply('hi~');
   	}
+//make beige talk
      if(command === "say") {
     // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
     // To get the "message" itself we join the `args` back into a string with spaces: 
@@ -40,6 +43,19 @@ client.on('message', async message => {
     message.channel.send(sayMessage);
 // for reading text         
          }
+
+	if(command === "addtip") {
+		//joinmessage
+		const tip = args.join(" ");
+        fs.writeFile('./source/tip.txt', tip, function (err) {
+               if (err) return console.log(err);
+            });
+	}
+	if command === "readtip") {
+	  var tip = fs.readFileSync("./source/tip.txt", {"encoding": "utf-8"}); 
+           message.author.send(tip);
+	
+	}
     
     
  
