@@ -16,8 +16,8 @@ client.on('message', async message => {
 //prefix = ">"
   if(message.content.indexOf(process.env.prefix) !== 0) return;
 	
-    const swearWords = ["darn", "shucks", "frak", "shite", "fuck", "shit", "damn"];
-	if( swearWords.some(word => message.content.includes(word)) ) {
+    const swearWords = ["hi", "shucks", "frak", "shite", "fuck", "shit", "damn"];
+	if(swearWords.some(word => message.content.includes(word))) {
  		 message.reply("Oh no you said a bad word!!!");
   // Or just do message.delete();
 		}
