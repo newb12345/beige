@@ -76,7 +76,7 @@ client.on('message', async message => {
     	var v=args.toString().split(' ').shift().shift().join(' '); // Takes the DM content from the message
         var member=message.mentions.users[0] ;// The mentioned user
 	// message.channel.send("ID: ${member}")
-        member.send(v); // send that user a DM
+        message.member.send(v); // send that user a DM
     }
 });
 
