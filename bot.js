@@ -7,7 +7,7 @@ client.on('ready', () => {
 
 client.on('message', async message => {
 //const prefix = "+"
- // if(message.content.indexOf(config.prefix) !== 0) return;
+  if(message.content.indexOf(process.env.prefix) !== 0) return;
    
     
    if (message.content === ">ladder") {
@@ -21,7 +21,6 @@ client.on('message', async message => {
         }
       if (message.content === "hello") {
           message.reply('hi~');
-         message.channel.send(process.env.prefix);
   	}
 });
 
