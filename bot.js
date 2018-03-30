@@ -13,7 +13,7 @@ client.on('message', async message => {
     //botception
      if(message.author.bot) return;
    	
-    const swearWords = ["darn", "fuck", "shit", "damn"];
+    const swearWords = ["darn", "fuck", "shit", "damn","dick","bitch","cunt","shag","pussy"];
 	if(swearWords.some(word => message.content.includes(word))) {
 		 message.delete().catch(O_o=>{});
  		 message.reply("Oh no you said a bad word!!! I deleted it for ya.");
@@ -22,7 +22,7 @@ client.on('message', async message => {
 		} 
 //prefix = ">"
   if(message.content.indexOf(process.env.prefix) !== 0) return;
-const categ = ["ladder", "club", "roadshow", "others"];
+const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
   const args = message.content.slice(process.env.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   //faq's on ladder  
@@ -74,6 +74,14 @@ const categ = ["ladder", "club", "roadshow", "others"];
           		 break;	
 		case 'roadshow':
 			var tips = fs.readFileSync("./source/tips_roadshow.txt", {"encoding": "utf-8"});
+			message.channel.send(tips);
+          		 break;	
+		case 'ranking':
+			var tips = fs.readFileSync("./source/tips_ranking.txt", {"encoding": "utf-8"});
+			message.channel.send(tips);
+          		 break;	
+		case 'krunk-dorm':
+			var tips = fs.readFileSync("./source/tips_dorm.txt", {"encoding": "utf-8"});
 			message.channel.send(tips);
           		 break;	
 		case 'others':
