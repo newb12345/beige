@@ -69,7 +69,7 @@ client.on('message', async message => {
    			   return message.reply("Ya! You forgot to include the tip!");
 		
 	 message.channel.send("Thanks! Your tip will be added after the mods read it. ^^");	
-		message.client.send("Hello!");
+		message.BLinKcle#9906.send("Hello!");
 	}
     
 });
