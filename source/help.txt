@@ -1,5 +1,4 @@
-
-```javascript 
+```
 _You can use me like this:_
 "_>hello_" ==> I'll greet you too ^^
 "_>ladder_"  ==> FAQs about ladder
