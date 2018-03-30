@@ -58,7 +58,7 @@ client.on('message', async message => {
  	sql.get(`SELECT * FROM addtips WHERE category ="${cat}"`).then(row => {
             message.channel.send(`Tips in ${cat}: ${row.suggestion}`)
        		 });	     
-	 sql.query("SELECT * FROM addtips", function (err, result, fields) {
+	 sql.get("SELECT * FROM addtips", function (err, result, fields) {
     			if (err) throw err;
     		message.channel.send(result);
   		});
