@@ -6,13 +6,12 @@ __You can use me like this:__
  >ladder  ==> FAQs about ladder
  >say [text] ==> Make me say something[mod&admin only]
  >readtip [category] ==> Read the tips given by users according to category.
- >addtip [category] [tips] ==> Add tips you know to help others. ^^ Tag according to category of the tip
-                           ==> It will not be added automatically. The mod will check it first. ^^'```
+ >addtip [category] [tips] ==> Add tips you know to help other enjoy the game like you do! Tag according to category of the tip. It will not be added automatically, I will check it first. ^^'```
 __ Available categories for now:__
 ``` -ladder -club -roadshow  -ranking  -krunk-dorm  -others ```
 
  __Under construction:__
-```css
+```javascript
  >roadshow ==> FAQs about roadshow
  >nhr  ==> FAQs about NHR
  >club ==> FAQs about club
