@@ -53,7 +53,7 @@ client.on('message', async message => {
 	     message.channel.send(read);
 
  	sql.get(`SELECT * FROM addtips WHERE category ="${cat}"`).then(row => {
-            message.channel.send(`Tips in ladder: ${row.suggestion[1]}`)
+            message.channel.send(`Tips in ladder: ${row[1].suggestion}`)
        		 });	     
 	      
         } 
