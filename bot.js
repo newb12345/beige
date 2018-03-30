@@ -52,10 +52,9 @@ client.on('message', async message => {
          var read = fs.readFileSync("./source/tips.txt", {"encoding": "utf-8"});
 	     message.channel.send(read);
 
- 	sql.get(`SELECT * FROM addtips WHERE category ="${cat}"`).then(row => {
-     		 if (!row) return message.reply("No tips yet. You can add some if you want using >addtip. ><");
-      			message.reply(`Tips in ${row.cat}: ${row.suggestion}`);
-  			  });
+ 	 sql.get(`SELECT * FROM addtips WHERE category ="${cat}"`).then(row => {
+            message.channel.send(`You have: $${row.suggestion}`)
+       		 });
         } 
 	
 // this whole block is for sqlite
