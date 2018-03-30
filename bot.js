@@ -54,7 +54,7 @@ client.on('message', async message => {
 	      
 	sql.get(`SELECT * FROM addtips WHERE category ="ladder"`).then(row => {
            if (!row) return message.reply("No tips yet. You might want to add one! :D");
-	    message.channel.send(`You have: $${row.suggestion}`);     }); 
+	    message.channel.send(`Tips in ladder: ${row.suggestion}`);     }); 
 
 
         } 
