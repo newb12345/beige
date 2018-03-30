@@ -48,6 +48,11 @@ client.on('message', async message => {
 // for reading text         
          }
 	
+	if (command === "readtip") {
+         var tips = fs.readFileSync("./source/addtips.txt", {"encoding": "utf-8"});
+	     message.channel.send(tips);
+        }
+	
     
 });
 
