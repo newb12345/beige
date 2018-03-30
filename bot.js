@@ -52,7 +52,9 @@ client.on('message', async message => {
          var tips = fs.readFileSync("./source/tips.txt", {"encoding": "utf-8"});
 	     message.channel.send(tips);
         }
-
+	if (command === "addtip"){
+	 message.channel.send("Thanks! Your tip will be added after the mods read it. ^^;");	
+	}
     
 });
 
