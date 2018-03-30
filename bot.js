@@ -18,11 +18,15 @@ client.on('message', async message => {
   const args = message.content.slice(process.env.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   //faq's on ladder  
-   if (command === "ladder") {
+      if (command === "ladder") {
          var lad = fs.readFileSync("./source/ladder.txt", {"encoding": "utf-8"});
 	     message.channel.send(lad);
         }
-    
+      if(command === "h") {
+           message.delete().catch(O_o=>{}); 
+           message.author.send(help);
+       }    
+	
       if (command === "hello") {
           message.reply('hi~');
   	}
@@ -38,10 +42,7 @@ client.on('message', async message => {
          }
     
     
-       if(command === "h") {
-           message.delete().catch(O_o=>{}); 
-           message.author.send(help);
-       }
+ 
          
 
     
