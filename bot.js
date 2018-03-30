@@ -65,11 +65,19 @@ const categ = ["ladder", "club", "roadshow", "song"];
 		switch(cat) {
           	  // !ping
           	  case 'ladder':
-			var tips = fs.readFileSync("./source/tips.txt", {"encoding": "utf-8"});
+			var tips = fs.readFileSync("./source/tips_ladder.txt", {"encoding": "utf-8"});
 			message.channel.send(tips);
           		 break;
 		case 'club':
-			var tips = fs.readFileSync("./source/help.txt", {"encoding": "utf-8"});
+			var tips = fs.readFileSync("./source/tips_club.txt", {"encoding": "utf-8"});
+			message.channel.send(tips);
+          		 break;	
+		case 'roadshow':
+			var tips = fs.readFileSync("./source/tips_roadshow.txt", {"encoding": "utf-8"});
+			message.channel.send(tips);
+          		 break;	
+		case 'song':
+			var tips = fs.readFileSync("./source/tips_roadshow.txt", {"encoding": "utf-8"});
 			message.channel.send(tips);
           		 break;	
             // Just add any case commands if you want to..
