@@ -55,9 +55,11 @@ client.on('message', async message => {
 	
 // this whole block is for sqlite
  if (command === "addtip") {
-	  let tips = args.slice(1).join(' ');
+	  let tips = args.slice(1);
 	  let category = args.slice(0).join(' ');
 	 message.channel.send(category);
+	 message.channel.send("------");
+	 message.channel.send(tips);
 	 /*
 sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
       sql.run("INSERT INTO scores (category, tips, member) VALUES (?, ?, ?)", [message.author.id, 1, 0]);
