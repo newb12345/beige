@@ -44,6 +44,7 @@ client.on('message', async message => {
     
        if(command === "h") {
            message.channel.send("On construction...");
+           message.channel.send(help);
        }
          
 
