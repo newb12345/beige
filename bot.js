@@ -39,7 +39,7 @@ client.on('message', async message => {
     
     
        if(command === "h") {
-           message.channel.send(help);
+           message.author.send(help);
        }
          
 
