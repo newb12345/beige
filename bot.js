@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 //sql
-const sql = require("sqlite");
+const sql = require("sqlite3");
 sql.open("./addtips.sqlite");
 
 var fs = require('fs');
