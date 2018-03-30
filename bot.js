@@ -56,7 +56,7 @@ client.on('message', async message => {
 // this whole block is for sqlite
  if (command === "addtip") {
 	  let tips = args.slice(1).join(' ');
-	  let category = args(0);
+	  let category = args[0];
 	 message.channel.send(category);
 	 message.channel.send("------");
 	 message.channel.send(tips);
