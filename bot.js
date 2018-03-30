@@ -7,8 +7,9 @@ client.on('ready', () => {
 
 client.on('message', async message => {
     
+  if(message.author.bot) return;
     
-//const prefix = "+"
+//prefix = ">"
   if(message.content.indexOf(process.env.prefix) !== 0) return;
     
   const args = message.content.slice(process.env.prefix.length).trim().split(/ +/g);
@@ -23,6 +24,7 @@ client.on('message', async message => {
         \n -No, the songs are pre-determined and one random one will be picked from the song list. \
         \n\n **Source** - https://www.taptap.com/topic/2666165 \n'); 	
         }
+    
       if (command === "hello") {
           message.reply('hi~');
   	}
