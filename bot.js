@@ -54,11 +54,11 @@ client.on('message', async message => {
         }
 	if command === "addtip") {
 		 let tip = args.slice(1).join(' ');
-		  if(!tip)
-   			   return message.reply("Ya! You forgot to include the tip!");
+	//	  if(!tip)
+   	//		   return message.reply("Ya! You forgot to include the tip!");
 	 	 let cat = args[0];
-		   if(!cat)
-   			   return message.reply("Eyyy...Choose what category is the tip first.");
+	//	   if(!cat)
+   //			   return message.reply("Eyyy...Choose what category is the tip first.");
 		message.channel.send("Thanks! Your tip will be added after the moderators read it. --'");
 	}
     
