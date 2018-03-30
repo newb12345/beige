@@ -1,10 +1,13 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 //sql
-const sql = require("sqlite");
-sql.open("./addtips.sqlite");
+//const sql = require("sqlite");
+//sql.open("./addtips.sqlite");
 
 var fs = require('fs');
+
+var sqlite3 = require('sqlite3').verbose();
+var db = new sqlite3.Database(':memory:');
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -48,7 +51,28 @@ client.on('message', async message => {
     message.channel.send(sayMessage);
 // for reading text         
          }
+	
 
+ if (command === "table"){
+  db.serialize(function() {
+  db.run("CREATE TABLE lorem (info TEXT)");
+ 
+  var stmt = db.prepare("INSERT INTO lorem VALUES (?)");
+  for (var i = 0; i < 10; i++) {
+      stmt.run("Ipsum " + i);
+  }
+  stmt.finalize();
+ 
+  db.each("SELECT rowid AS id, info FROM lorem", function(err, row) {
+      messge.channel.send(row.id + ": " + row.info);
+  });
+});
+ 
+db.close();	
+ }	
+	
+	
+/*
   //reading and adding tips  
       if (command === "readtip") {
 	      let cat = args[0];
@@ -86,7 +110,7 @@ client.on('message', async message => {
 	message.channel.send("Adding tips succesful!");
 	 
   } 
-//*
+*/
  
          
 
