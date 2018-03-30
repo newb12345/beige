@@ -47,12 +47,12 @@ client.on('message', async message => {
 	if(command === "addtip") {
 		//joinmessage
 		const tip = args.join(" ");
-        fs.writeFile('./source/tip.txt', tip, function (err) {
+        fs.writeFile('./source/tips.txt', tip, function (err) {
                if (err) return console.log(err);
             });
 	}
 	if command === "readtip") {
-	  var tip = fs.readFileSync("./source/tip.txt", {"encoding": "utf-8"}); 
+	  var tip = fs.readFileSync("./source/tips.txt", {"encoding": "utf-8"}); 
            message.author.send(tip);
 	
 	}
