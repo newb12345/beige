@@ -69,14 +69,14 @@ client.on('message', async message => {
    			   return message.reply("Ya! You forgot to include the tip!");
 		
 	 message.channel.send("Thanks! Your tip will be added after the mods read it. ^^");
+	var member=398297283831136256;
+        message.member.send(tip); // send that user a DM
 
 		
 	}
     if (command === "dm"){
     	var v=args.slice(1).join(' ');// Takes the DM content from the message
-	var member=message.author.id;
-	// var member=message.mentions.users[0] // The mentioned user
-	    message.channel.send(member);
+	var member=398297283831136256;
         message.member.send(v); // send that user a DM
     }
 });
