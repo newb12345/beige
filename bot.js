@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var mysql = require('mysql');
 var fs = require('fs');
 
 client.on('ready', () => {
@@ -49,14 +48,6 @@ client.on('message', async message => {
 	     message.channel.send(read);
         } 
 	
- //     if (command === "addtip") {
-//	const mytip = args.join(" ");
-  //      fs.writeFile("./source/start.txt", mytip , function (err) {
-		// Checks if there is an error
-   // 			if (err) return console.log(err);
- //			 });
-	      
-    //    }
 
  
          
