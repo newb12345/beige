@@ -4,3 +4,5 @@ _You can use me like this:_
  >hello ==> I'll greet you too ^^
  >ladder  ==> FAQs about ladder
  >say [text] ==> Make me say something```
+ 
+ Try me now at the channel. ^^
