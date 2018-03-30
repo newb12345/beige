@@ -9,7 +9,7 @@ _You can use me like this:_
  >addtip [category] [tips] ==> Add tips you know to help others. ^^ Tag according to category of the tip
                            ==> It will not be added automatically. The mod will check it first. ><```
 __ Available categories for now:__
-``` -ladder    -club    -roadshow   -song  ```
+``` -ladder    -club    -roadshow   -ranking -others  ```
 
  __Under construction:__
 ``` >roadshow ==> FAQs about ladder
