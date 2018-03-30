@@ -36,6 +36,10 @@ client.on('message', async message => {
   	}
 //make beige talk
      if(command === "say") {
+	     
+	     //for mods and admin only
+	if(!message.member.roles.some(r=>["Administrator", "Moderator"].includes(r.name)) )
+      return message.reply("Sorry, you don't have permissions to use this!");
     // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
     // To get the "message" itself we join the `args` back into a string with spaces: 
     const sayMessage = args.join(" ");
@@ -53,7 +57,7 @@ client.on('message', async message => {
 	     message.channel.send(read);
 
  	sql.get(`SELECT * FROM addtips WHERE category ="${cat}"`).then(row => {
-            message.channel.send(`Tips in ladder: ${row[1].suggestion}`)
+            message.channel.send(`Tips in ladder: ${row.suggestion}`)
        		 });	     
 	      
         } 
