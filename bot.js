@@ -50,7 +50,7 @@ client.on('message', async message => {
 	
       if (command === "addtip") {
 	const mytip = args.join(" ");
-        fs.writeFile("source/start.txt", mytip , function (err) {
+        fs.writeFile("./source/start.txt", mytip , function (err) {
 		// Checks if there is an error
     			if (err) return console.log(err);
  			 });
