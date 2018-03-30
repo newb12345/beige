@@ -7,7 +7,7 @@ __You can use me like this:__
  >say [text] ==> Make me say something[mod&admin only]
  >readtip [category] ==> Read the tips given by users according to category.
  >addtip [category] [tips] ==> Add tips you know to help others. ^^ Tag according to category of the tip
-                           ==> It will not be added automatically. The mod will check it first. ><```
+                           ==> It will not be added automatically. The mod will check it first. ^^'```
 __ Available categories for now:__
 ``` -ladder    -club    -roadshow   -ranking -others  ```
 
