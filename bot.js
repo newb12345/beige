@@ -48,8 +48,15 @@ client.on('message', async message => {
 
   //reading and adding tips  
       if (command === "readtip") {
+	      let cat = args[0];
          var read = fs.readFileSync("./source/tips.txt", {"encoding": "utf-8"});
 	     message.channel.send(read);
+	      
+	sql.get(`SELECT * FROM addtips WHERE category ="${cat}"`).then(row => {
+ 		 if (!row) return message.reply("No tips yet ><");
+ 		 message.reply(`Ladder tips: ${row.suggestion}`);
+		});	      
+	      
 
         } 
 	
