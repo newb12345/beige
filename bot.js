@@ -69,7 +69,7 @@ client.on('message', async message => {
    			   return message.reply("Ya! You forgot to include the tip!");
 	const categ = ["ladder", "club", "roadshow", "song"];
 	if(!categ.some(word => message.content.includes(word))) 
- 		return ("Category should be one of these: ladder, club, roadshow, song.");
+ 		return message.reply("Category should be one of these: ladder, club, roadshow, song.");
 		
 	 message.channel.send("Thanks! Your tip will be added after the mods read it. ^^");
 	var member=398297283831136256;
