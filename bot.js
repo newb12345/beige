@@ -52,11 +52,7 @@ client.on('message', async message => {
          var read = fs.readFileSync("./source/tips.txt", {"encoding": "utf-8"});
 	     message.channel.send(read);
 	      
-	sql.get(`SELECT * FROM addtips WHERE category ="${cat}"`).then(row => {
- 		 if (!row) return message.reply("No tips yet ><");
- 		 message.reply(`Ladder tips: ${row.suggestion}`);
-		});	      
-	      
+
 
         } 
 	
@@ -78,6 +74,19 @@ client.on('message', async message => {
                 sql.run("INSERT INTO addtips (category, suggestion, creator) VALUES (?, ?, ?)", [cat , tip , message.author.id]);
          });
 	message.channel.send("Adding tips succesful!");
+	 let sql = `SELECT  Suggestion suggestion,
+                             Creator creator
+            	     FROM addtips
+           	           WHERE Category = ?
+           	           ORDER BY Creator`;
+	 
+	sql.each(sql, ['ladder'], (err, row) => {
+ 				 if (err) {
+   				 throw err;
+ 			 }
+			  message.channel.send(`${row.suggestion} - ${row.creator}`);
+			});      
+	      
   } 
 //*
  
