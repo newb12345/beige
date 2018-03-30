@@ -2,8 +2,6 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 var fs = require('fs');
 
-
-
 client.on('ready', () => {
     console.log('I am ready!');
 });
@@ -44,17 +42,6 @@ client.on('message', async message => {
 // for reading text         
          }
 
-//	if(command === "addtip") {
-		//joinmessage
-	//	const tip = args.join(" ");
-        //fs.writeFile('./source/tips.txt', tip, {"encoding": "utf-8"});
-//	}
-	
-//	if command === "readtip") {
-//	  var tip = fs.readFileSync("./source/tips.txt", {"encoding": "utf-8"}); 
-  //         message.author.send(tip);
-	
-//	}
     
     
  
