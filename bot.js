@@ -78,7 +78,7 @@ client.on('message', async message => {
            if (!row) return message.reply("No tips yet. You might want to add one! :D");
               message.reply(` ${row.suggestion}`);
     });
-	      
+	 message.channel.send("--!");     
   } 
 //*
  
