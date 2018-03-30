@@ -13,7 +13,7 @@ __ Available categories for now:__
 
  __Under construction:__
 ```css
- >roadshow ==> FAQs about ladder
+ >roadshow ==> FAQs about roadshow
  >nhr  ==> FAQs about NHR
  >club ==> FAQs about club
  >collection ==> FAQs about collection
