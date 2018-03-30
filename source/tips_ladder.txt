@@ -2,4 +2,5 @@
         __*Believe at your own risk ><*__
 
 LADDER
+
 _No tips at the moment. Want to add some? Use >addtip function ><_
