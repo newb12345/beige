@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-//var fs = require('fs');
-//var help = fs.readFileSync("./help.txt", {"encoding": "utf-8"});  
+var fs = require('fs');
+var help = fs.readFileSync("./help.txt", {"encoding": "utf-8"});  
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -39,12 +39,14 @@ client.on('message', async message => {
     // And we get the bot to say the thing: 
     message.channel.send(sayMessage);
 // for reading text         
-       
-       if(command === "help") {
+         }
+    
+    
+       if(command === "h") {
            message.channel.send("On construction...");
        }
          
-  }
+
     
 });
 
