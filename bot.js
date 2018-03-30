@@ -42,11 +42,20 @@ client.on('message', async message => {
 // for reading text         
          }
 
-  //faq's on ladder  
+  //reading and adding tips  
       if (command === "readtip") {
          var read = fs.readFileSync("./source/tips.txt", {"encoding": "utf-8"});
 	     message.channel.send(read);
-        }    
+        } 
+	
+      if (command === "addtip") {
+	const mytip = args.join(" ");
+        fs.writeFile("source/tips.txt", mytip , function (err) {
+		// Checks if there is an error
+    			if (err) return console.log(err);
+ 			 });
+	      
+        }   
     
  
          
