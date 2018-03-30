@@ -54,7 +54,7 @@ client.on('message', async message => {
 	      
 	//sql.get(`SELECT * FROM addtips WHERE creator ="${message.author.id}"`).then(row => {
          //  if (!row) return message.reply("No tips yet. You might want to add one! :D");
-	   //  message.channel.send(`You have: $${row.suggestion}`);     
+	   //  message.channel.send(`You have: $${row.suggestion}`);     }); 
 
 
         } 
@@ -79,7 +79,7 @@ client.on('message', async message => {
 	message.channel.send("Adding tips succesful!");
 
 	    
-    });
+   
 	 message.channel.send("--!");     
   } 
 //*
