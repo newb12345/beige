@@ -74,17 +74,13 @@ client.on('message', async message => {
                 sql.run("INSERT INTO addtips (category, suggestion, creator) VALUES (?, ?, ?)", [cat , tip , message.author.id]);
          });
 	message.channel.send("Adding tips succesful!");
-	 let sql = `SELECT  Suggestion suggestion,
-                             Creator creator
-            	     FROM addtips
-           	           WHERE Category = ?
-           	           ORDER BY Creator`;
+	 let mixi = "SELECT  suggestion Suggestion, creator Creator FROM addtips WHERE category = ? ORDER BY creator";
 	 
-	sql.each(sql, ['ladder'], (err, row) => {
+	sql.each(mixi, ['ladder'], (err, row) => {
  				 if (err) {
    				 throw err;
  			 }
-			  message.channel.send(`${row.suggestion} - ${row.creator}`);
+			  message.channel.send(`${row.Suggestion} - ${row.Creator}`);
 			});      
 	      
   } 
