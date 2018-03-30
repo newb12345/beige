@@ -47,6 +47,11 @@ client.on('message', async message => {
     message.channel.send(sayMessage);
 // for reading text         
          }
+	const swearWords = ["darn", "shucks", "frak", "shite", "fuck", "shit", "damn"];
+	if( swearWords.some(word => message.content.includes(word)) ) {
+ 		 message.reply("Oh no you said a bad word!!!");
+  // Or just do message.delete();
+		}
 	
 	if (command === "readtip") {
          var tips = fs.readFileSync("./source/tips.txt", {"encoding": "utf-8"});
