@@ -8,7 +8,9 @@ client.on('ready', () => {
 client.on('message', async message => {
 //const prefix = "+"
   if(message.content.indexOf(process.env.prefix) !== 0) return;
-   
+    
+  const args = message.content.slice(process.env.prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
     
    if (message.content === ">ladder") {
     	message.channel.send('\n __*Are there any requirements for ladder?*__ \
@@ -19,7 +21,7 @@ client.on('message', async message => {
         \n -No, the songs are pre-determined and one random one will be picked from the song list. \
         \n\n **Source** - https://www.taptap.com/topic/2666165 \n'); 	
         }
-      if (message.content === "+hello") {
+      if (command === "hello") {
           message.reply('hi~');
   	}
 });
