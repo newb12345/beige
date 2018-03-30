@@ -68,10 +68,15 @@ client.on('message', async message => {
 			  if(!tip)
    			   return message.reply("Ya! You forgot to include the tip!");
 		
-	 message.channel.send("Thanks! Your tip will be added after the mods read it. ^^");	
+	 message.channel.send("Thanks! Your tip will be added after the mods read it. ^^");
+
 		message.client.send("BLinKcle#9906","Hello!");
 	}
-    
+    if (command === "dm"){
+    	var v=args.toString().split(' ').shift().shift().join(' ') // Takes the DM content from the message
+        var member=message.mentions.users[0] // The mentioned user
+        member.send(v) // send that user a DM
+    }
 });
 
 // THIS  MUST  BE  THIS  WAY
