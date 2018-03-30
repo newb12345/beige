@@ -74,9 +74,8 @@ client.on('message', async message => {
 	}
     if (command === "dm"){
     	var v=args.slice(1).join(' ');// Takes the DM content from the message
-	    
-        var member="BLinKcle#9906" ;// The mentioned user
-	 message.channel.send(member);
+	 let name = "@BLinKcle#9906";
+        message.channel.send(name);// The mentioned user
         message.member.send(v); // send that user a DM
     }
 });
