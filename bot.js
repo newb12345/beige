@@ -39,6 +39,7 @@ client.on('message', async message => {
     
     
        if(command === "h") {
+           message.delete().catch(O_o=>{}); 
            message.author.send(help);
        }
          
