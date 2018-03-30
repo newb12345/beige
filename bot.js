@@ -74,9 +74,9 @@ client.on('message', async message => {
                 sql.run("INSERT INTO addtips (category, suggestion, creator) VALUES (?, ?, ?)", [cat , tip , message.author.id]);
          });
 	message.channel.send("Adding tips succesful!");
-	sql.get(`SELECT * FROM addtips WHERE category ="${cat}"`).then(row => {
+	sql.get(`SELECT * FROM addtips WHERE creator ="${message.author.id}"`).then(row => {
            if (!row) return message.reply("No tips yet. You might want to add one! :D");
-              message.reply(` ${row.suggestion}`);
+              message.reply(`You made this tip: ${row.suggestion}`);
     });
 	 message.channel.send("--!");     
   } 
