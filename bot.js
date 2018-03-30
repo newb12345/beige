@@ -12,15 +12,15 @@ client.on('ready', () => {
 client.on('message', async message => {
     //botception
      if(message.author.bot) return;
-    
-//prefix = ">"
-  if(message.content.indexOf(process.env.prefix) !== 0) return;
-	
+   	
     const swearWords = ["hi", "shucks", "frak", "shite", "fuck", "shit", "damn"];
 	if(swearWords.some(word => message.content.includes(word))) {
  		 message.reply("Oh no you said a bad word!!!");
   // Or just do message.delete();
-		}
+		} 
+//prefix = ">"
+  if(message.content.indexOf(process.env.prefix) !== 0) return;
+
   const args = message.content.slice(process.env.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   //faq's on ladder  
