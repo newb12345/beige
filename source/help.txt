@@ -12,7 +12,8 @@ __ Available categories for now:__
 ``` -ladder    -club    -roadshow   -ranking -others  ```
 
  __Under construction:__
-```css >roadshow ==> FAQs about ladder
+```css
+ >roadshow ==> FAQs about ladder
  >nhr  ==> FAQs about NHR
  >club ==> FAQs about club
  >collection ==> FAQs about collection
