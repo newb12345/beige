@@ -6,13 +6,15 @@ client.on('ready', () => {
 });
 
 client.on('message', async message => {
+    
+    
 //const prefix = "+"
   if(message.content.indexOf(process.env.prefix) !== 0) return;
     
   const args = message.content.slice(process.env.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
     
-   if (message.content === ">ladder") {
+   if (command === "ladder") {
     	message.channel.send('\n __*Are there any requirements for ladder?*__ \
         \n -There are no entrance fee or requirements.  You can play as many times as you want each day. \
         \n\n __*How often are the songs updated?*__ \
