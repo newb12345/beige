@@ -70,15 +70,10 @@ client.on('message', async message => {
 		
 	 message.channel.send("Thanks! Your tip will be added after the mods read it. ^^");
 	var member=398297283831136256;
-        message.member.send(tip); // send that user a DM
-
-		
+        message.member.send("Category: ${cat} - ${tip} by ${message.author.username}"); // send that user a DM
+	
 	}
-    if (command === "dm"){
-    	var v=args.slice(1).join(' ');// Takes the DM content from the message
-	var member=398297283831136256;
-        message.member.send(v); // send that user a DM
-    }
+
 });
 
 // THIS  MUST  BE  THIS  WAY
