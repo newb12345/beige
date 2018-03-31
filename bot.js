@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 //sql
-//const start = require("./source/start.js");
+const start = require("./source/start.js");
  
 
 
@@ -32,7 +32,7 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
   //faq's on ladder  
     switch(command) {
 		case 'ladder': 
-		//      message.channel.send(start.embed);
+		      message.channel.send(start.embed);
 					     break;
          		//var com = fs.readFileSync("./source/ladder.txt", {"encoding": "utf-8"});
 		    
