@@ -40,21 +40,18 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
       name: client.user.username,
       icon_url: client.user.avatarURL
     },
-    title: "This is an embed",
+    title: "3447003",
     url: "http://google.com",
-    description: "This is a test embed to showcase what they look like and what they can do.",
+    description: "Ladder FAQ",
+thumbnail: "https://i.imgur.com/TgNMUlS.jpg", 
     fields: [{
-        name: "Fields",
-        value: "They can have different fields with small headlines."
+        name: "Q: How often are the songs updated?",
+        value: "A: Once every 48 hours.  It is worth mentioning that the songs will contain Platinum-only songs, so non-Platinum members get to experience them too.."
       },
       {
-        name: "Masked links",
-        value: "You can put [masked links](http://google.com) inside of rich embeds."
+        name: "Q: Can we pick the song(s) we want to play?",
+        value: "A: No, the songs are pre-determined and one random song will be chosen for you from the song list."
       },
-      {
-        name: "Markdown",
-        value: "You can put all the *usual* **__Markdown__** inside of them."
-      }
     ],
     timestamp: new Date(),
     footer: {
@@ -63,19 +60,7 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
     }
   }
 });
-		    message.channel.send({embed: {
-			     color: 3447003,
-			    title:"Ladder FAQ",
-			    thumbnail: "https://i.imgur.com/TgNMUlS.jpg", 
-			   		 fields: [{name: "Q: How often are the songs updated?", 
-			    		           value: "A: Once every 48 hours.  It is worth mentioning that the songs will contain Platinum-only songs, so non-Platinum members get to experience them too."
-						  },
-				    		 {name: "Q: Can we pick the song(s) we want to play?", 
-				      value: "A: No, the songs are pre-determined and one random song will be chosen for you from the song list."
-						 }
-						 ] 
-		    			}
-				});
+	
 
 		    message.channel.send("done!");
 					     break;
