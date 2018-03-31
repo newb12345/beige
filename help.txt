@@ -1,5 +1,0 @@
->help
-
->hello - Beige will reply hi
->say [text] - Beige will delete message and say the text
->ladder - Beige will show the tips for ladder
