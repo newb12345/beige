@@ -1,5 +1,10 @@
 // start.js
 
-module.exports.embed =  new Discord.RichEmbed()
-                        .setTitle("This is your title, it can hold 256 characters");
-module.exports.data = 1234;
+const Discord = require("discord.js");
+
+var embed = new Discord.RichEmbed()
+  .setTitle("Title")
+
+module.exports = Object.freeze({
+  embed: {embed}
+});
