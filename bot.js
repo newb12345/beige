@@ -147,8 +147,8 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
 		var userID = user.replace(/[<@!>]/g, '');
 		var member = message.guild.member(userID);
 		    message.member.send("hi!");
-		
-		message.channel.send(client.users.get("398297283831136256"));
+		client.users.get("398297283831136256").send("My Message");
+		message.channel.send('Hi!");
 	}
 	
 	if (command === "addtip"){
