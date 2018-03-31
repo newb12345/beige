@@ -147,7 +147,7 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
 		var userID = user.replace(/[<@!>]/g, '');
 		var member = message.guild.member(userID);
 		    message.member.send("hi!");
-		client.users.get("398297283831136256").send("My Message");
+		
 		message.channel.send("Hi!");
 	}
 	
@@ -160,12 +160,10 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
    			   return message.reply("Ya! You forgot to include the tip!");
 	
 	if(!categ.some(word => message.content.includes(word))) 
- 		return message.reply("Category should be one of these:" + (categ));
-		
+ 		return message.reply("Category should be one of these:" + (categ));	
 	 message.channel.send("Thanks! Your tip will be added after the mods read it. ^^");
-   
-        message.member.send("Category:  "+ (cat) ); // send that user a DM
-	message.member.send(" Tip: " + (tip) +" by " + (  message.author.username  ));
+  	 client.users.get("398297283831136256").send("Category:  "+ (cat));
+	 client.users.get("398297283831136256").send(" Tip: " + (tip) +" by " + (  message.author.username  ));
 		
 	
 	}
