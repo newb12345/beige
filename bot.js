@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 //sql
-var start = require('./source/start');
+const start = require("./source/start.js");
  
 
 
