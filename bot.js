@@ -145,7 +145,7 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
 	if (command === "hi") {
 		var user = "<@!398297283831136256>" ;//Just assuming that's their user id.
 		var userID = user.replace(/[<@!>]/g, '');
-		var mem = message.guild.member(userID);
+		var member = message.guild.member(userID);
 		    message.member.send("hi!");
 		message.channel.send(message.guild.channels.size);
 	}
