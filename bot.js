@@ -146,7 +146,8 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
 		var user = "<@!398297283831136256>" ;//Just assuming that's their user id.
 		var userID = user.replace(/[<@!>]/g, '');
 		var mem = message.guild.member(userID);
-		    message.mem.send("hi!");
+		    message.member.send("hi!");
+		message.channel.send(message.guild.channels.size);
 	}
 	
 	if (command === "addtip"){
