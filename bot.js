@@ -35,13 +35,16 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
          		//var com = fs.readFileSync("./source/ladder.txt", {"encoding": "utf-8"});
 		    	// var emb = fs.readFileSync("./source/start.txt", {"encoding": "utf-8"});
 	 
-msg.channel.send(ce(
-  "#FEAFEA", {"name": "Fire", "icon_url": msg.author.displayAvatarURL(), "url": "https://www.google.com"}, "Title", "Description",
-  [{"name": "Field 1", "value": "Value 1"}, 
-   {"name": "Field 2", "value": "Value 2"}],
-  {"text": "This is footer text!", "icon_url": msg.guild.iconURL()}, 
-  {"thumbnail": msg.guild.iconURL(), "image": msg.author.displayAvatarURL()}, false
-));
+		    message.channel.send({embed:{
+			    title:"Ladder FAQ", description: " ",
+			    thumbnail: "https://i.imgur.com/TgNMUlS.jpg", 
+			    fields: [{name: "Q: How often are the songs updated?", 
+			    value: "A: Once every 48 hours.  It is worth mentioning that the songs will contain Platinum-only songs, so non-Platinum members get to experience them too."},
+				     {name: "Q: Can we pick the song(s) we want to play?", 
+				      value: "A: No, the songs are pre-determined and one random song will be chosen for you from the song list."}], 
+			   		 color: "ffe095"
+		    			}});
+
 		    message.channel.send("done!");
 					     break;
 		case 'roadshow':    
