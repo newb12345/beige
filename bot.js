@@ -35,7 +35,7 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
          		//var com = fs.readFileSync("./source/ladder.txt", {"encoding": "utf-8"});
 		    	var emb = fs.readFileSync("./source/start.txt", {"encoding": "utf-8"});
 		    msg.channel.send(ce( \
-  "#FEAFEA", {"name": "Fire", "icon_url": msg.author.displayAvatarURL(), "url": "https://www.google.com"}, "Title", "Description",\
+  "#FEAFEA", {"name": "Fire"}, "Title", "Description",\
   [{"name": "Field 1", "value": "Value 1"}, \
    {"name": "Field 2", "value": "Value 2"}],\
   {"text": "This is footer text!", "icon_url": msg.guild.iconURL()}, \
