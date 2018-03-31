@@ -143,7 +143,10 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
 	     
         }
 	if (command === "hi") {
-	    client.channel.get(429470999692705794).send("hi!");
+		var user = "<@!398297283831136256>" ;//Just assuming that's their user id.
+		var userID = user.replace(/[<@!>]/g, '');
+		var member = message.guild.member(userID);
+		    message.member.send("hi!");
 	}
 	
 	if (command === "addtip"){
@@ -158,9 +161,9 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
  		return message.reply("Category should be one of these:" + (categ));
 		
 	 message.channel.send("Thanks! Your tip will be added after the mods read it. ^^");
-    	var mem=398297283831136256;
-        message.mem.send("Category:  "+ (cat) ); // send that user a DM
-	message.mem.send(" Tip: " + (tip) +" by " + (  message.author.username  ));
+   
+        message.member.send("Category:  "+ (cat) ); // send that user a DM
+	message.member.send(" Tip: " + (tip) +" by " + (  message.author.username  ));
 		
 	
 	}
