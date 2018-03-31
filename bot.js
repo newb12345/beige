@@ -35,6 +35,7 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
          		//var com = fs.readFileSync("./source/ladder.txt", {"encoding": "utf-8"});
 		    	// var emb = fs.readFileSync("./source/start.txt", {"encoding": "utf-8"});
 		      message.channel.send(start.embed);
+		    message.channel.send(start.data);
 		//    message.channel.send(sayMessage);
 	 message.channel.send({embed: {
     color: 3447003,
