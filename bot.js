@@ -34,6 +34,8 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
 		case 'ladder':    
          		//var com = fs.readFileSync("./source/ladder.txt", {"encoding": "utf-8"});
 		    	// var emb = fs.readFileSync("./source/start.txt", {"encoding": "utf-8"});
+		       const sayMessage = args.join(" ");
+		    message.channel.send(sayMessage);
 	 message.channel.send({embed: {
     color: 3447003,
     author: {
