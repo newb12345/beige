@@ -40,7 +40,7 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
       name: client.user.username,
       icon_url: client.user.avatarURL
     },
-    title: "3447003",
+    title: "Ladder",
     url: "http://google.com",
     description: "Ladder FAQ",
 //thumbnail: "https://i.imgur.com/TgNMUlS.jpg", 
