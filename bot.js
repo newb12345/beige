@@ -13,7 +13,7 @@ client.on('message', async message => {
     //botception
      if(message.author.bot) return;
     const swearWords = ["darn", "fuck", "shit", "damn","dick","bitch","cunt","shag","pussy"];
-	if(swearWords.some(word => message.content.includes(word))) {
+	if(swearWords.some(word => message.content.toLowerCase().includes(word))) {
 		 message.delete().catch(O_o=>{});
  		 message.reply("Oh no you said a bad word!!! I deleted it for ya.");
 		 
