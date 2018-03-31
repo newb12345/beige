@@ -43,6 +43,9 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
     title: "Ladder",
     url: "http://google.com",
     description: "Ladder FAQ",
+	"thumbnail": {
+      "url": "https://i.imgur.com/TgNMUlS.jpg"
+    },
 //thumbnail: "https://i.imgur.com/TgNMUlS.jpg", 
     fields: [{
         name: "Q: How often are the songs updated?",
