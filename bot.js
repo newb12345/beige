@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 //sql
-
+const ce = require("embed-creator");
  
 
 
@@ -34,36 +34,13 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
 		case 'ladder':    
          		//var com = fs.readFileSync("./source/ladder.txt", {"encoding": "utf-8"});
 		    	var emb = fs.readFileSync("./source/start.txt", {"encoding": "utf-8"});
-		    const embed = new Discord.RichEmbed()
-			 .setTitle("Ladder")
- 			 .setAuthor("Author Name", "https://i.imgur.com/lm8s41J.png")
-  /*
-   * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-   */
- 			 .setColor(0x00AE86)
- 			 .setDescription("This is the main body of text, it can hold 2048 characters.")
- 			 .setFooter("This is the footer text, it can hold 2048 characters", "http://i.imgur.com/w1vhFSR.png")
-			  .setImage("http://i.imgur.com/yVpymuV.png")
- 			 .setThumbnail("http://i.imgur.com/p2qNFag.png")
-  /*
-   * Takes a Date object, defaults to current date.
-   */
-  				.setTimestamp()
-				  .setURL("https://discord.js.org/#/docs/main/indev/class/RichEmbed")
-			  .addField("This is a field title, it can hold 256 characters",
-		    "This is a field value, it can hold 2048 characters.")
-  /*
-   * Inline fields may not display as inline if the thumbnail and/or image is too big.
-   */
-  .addField("Inline Field", "They can also be inline.", true)
-  /*
-   * Blank field, useful to create some space.
-   */
-  .addBlankField(true)
-  .addField("Inline Field 3", "You can have a maximum of 25 fields.", true);
-	   		//message.channel.send(com);
-		    	  message.channel.send({embed});
-		//    	message.channel.send(emb);
+		    msg.channel.send(ce(
+  "#FEAFEA", {"name": "Fire", "icon_url": msg.author.displayAvatarURL(), "url": "https://www.google.com"}, "Title", "Description",
+  [{"name": "Field 1", "value": "Value 1"}, 
+   {"name": "Field 2", "value": "Value 2"}],
+  {"text": "This is footer text!", "icon_url": msg.guild.iconURL()}, 
+  {"thumbnail": msg.guild.iconURL(), "image": msg.author.displayAvatarURL()}, false
+));
 					     break;
 		case 'roadshow':    
          		var com = fs.readFileSync("./source/roadshow.txt", {"encoding": "utf-8"});
