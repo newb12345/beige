@@ -31,7 +31,7 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
          		//var com = fs.readFileSync("./source/ladder.txt", {"encoding": "utf-8"});
 		    	var emb = fs.readFileSync("./source/start.txt", {"encoding": "utf-8"});
 	   		//message.channel.send(com);
-		    	message.channel.send(message.content);
+		    	message.channel.send({args.join(" ")});
 					     break;
 		case 'roadshow':    
          		var com = fs.readFileSync("./source/roadshow.txt", {"encoding": "utf-8"});
