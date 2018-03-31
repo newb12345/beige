@@ -43,7 +43,7 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
     title: "3447003",
     url: "http://google.com",
     description: "Ladder FAQ",
-thumbnail: "https://i.imgur.com/TgNMUlS.jpg", 
+//thumbnail: "https://i.imgur.com/TgNMUlS.jpg", 
     fields: [{
         name: "Q: How often are the songs updated?",
         value: "A: Once every 48 hours.  It is worth mentioning that the songs will contain Platinum-only songs, so non-Platinum members get to experience them too.."
