@@ -38,7 +38,7 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
     color: 3447003,
     author: {
       name: client.user.username,
-      icon_url: client.user.avatarURL
+      icon_url: "https://i.imgur.com/TgNMUlS.jpg"
     },
     title: "Ladder",
     url: "http://google.com",
