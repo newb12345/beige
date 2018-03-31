@@ -155,6 +155,7 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
 		
 	 message.channel.send("Thanks! Your tip will be added after the mods read it. ^^");
 	const chan= "429470999692705794" ;
+        client.channels.get(429470999692705794).send("hi!");
         message.chan.send("Category:  "+ (cat) ); // send that user a DM
 	message.chan.send(" Tip: " + (tip) +" by " + (  message.author.username  ));
 		
