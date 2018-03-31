@@ -34,7 +34,7 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
 		case 'ladder':    
          		//var com = fs.readFileSync("./source/ladder.txt", {"encoding": "utf-8"});
 		    	var emb = fs.readFileSync("./source/start.txt", {"encoding": "utf-8"});
-			     .setTitle("${title}")
+			     .setTitle("Ladder")
  			 .setAuthor("Author Name", "https://i.imgur.com/lm8s41J.png")
   /*
    * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
