@@ -31,11 +31,11 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
   const command = args.shift().toLowerCase();
   //faq's on ladder  
     switch(command) {
-		case 'ladder':    
-         		//var com = fs.readFileSync("./source/ladder.txt", {"encoding": "utf-8"});
-		    	// var emb = fs.readFileSync("./source/start.txt", {"encoding": "utf-8"});
+		case 'ladder': 
 		      message.channel.send(start.embed);
 					     break;
+         		//var com = fs.readFileSync("./source/ladder.txt", {"encoding": "utf-8"});
+		    
 		case 'roadshow':    
          		var com = fs.readFileSync("./source/roadshow.txt", {"encoding": "utf-8"});
 	   		message.channel.send(com);
