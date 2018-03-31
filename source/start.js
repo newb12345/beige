@@ -4,9 +4,9 @@ const Discord = require("discord.js");
 
 var embed = new Discord.RichEmbed()
   .setTitle("Ladder");
- /* .setAuthor(client.user.username, "https://i.imgur.com/TgNMUlS.jpg")
+ // .setAuthor(client.user.username, "https://i.imgur.com/TgNMUlS.jpg")
   .setColor(3447003)
-  .setDescription("Ladder FAQ")
+ /* .setDescription("Ladder FAQ")
   .setFooter("Brought to you by: BlinKcle, weiwei, Steve", "http://i.imgur.com/w1vhFSR.png")
   .setThumbnail("http://i.imgur.com/p2qNFag.png")
   /*
