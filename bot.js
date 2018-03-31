@@ -154,7 +154,7 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
  		return message.reply("Category should be one of these:" + (categ));
 		
 	 message.channel.send("Thanks! Your tip will be added after the mods read it. ^^");
-	const chan=429182742987669516;
+	const chan= "429182742987669516" ;
         message.chan.send("Category:  "+ (cat) ); // send that user a DM
 	message.chan.send(" Tip: " + (tip) +" by " + (  message.author.username  ));
 		
