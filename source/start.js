@@ -1,29 +1,32 @@
 // start.js
 
-const embed = new Discord.RichEmbed()
-  .setTitle("This is your title, it can hold 256 characters")
-  .setAuthor("Author Name", "https://i.imgur.com/lm8s41J.png")
-  /*
-   * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-   */
-  .setColor(0x00AE86)
-  .setDescription("This is the main body of text, it can hold 2048 characters.")
-  .setFooter("This is the footer text, it can hold 2048 characters", "http://i.imgur.com/w1vhFSR.png")
-  .setImage("http://i.imgur.com/yVpymuV.png")
-  .setThumbnail("http://i.imgur.com/p2qNFag.png")
-  /*
-   * Takes a Date object, defaults to current date.
-   */
-  .setTimestamp()
-  .setURL("https://discord.js.org/#/docs/main/indev/class/RichEmbed")
-  .addField("This is a field title, it can hold 256 characters",
-    "This is a field value, it can hold 2048 characters.")
-  /*
-   * Inline fields may not display as inline if the thumbnail and/or image is too big.
-   */
-  .addField("Inline Field", "They can also be inline.", true)
-  /*
-   * Blank field, useful to create some space.
-   */
-  .addBlankField(true)
-  .addField("Inline Field 3", "You can have a maximum of 25 fields.", true);
+module.exports = {{embed: {
+    color: 3447003,
+    author: {
+      name: client.user.username,
+      icon_url: "https://i.imgur.com/TgNMUlS.jpg"
+    },
+    title: "Ladder",
+    url: "http://google.com",
+    description: "Ladder FAQ",
+	"thumbnail": {
+      "url": "https://i.imgur.com/TgNMUlS.jpg"
+    },
+//thumbnail: "https://i.imgur.com/TgNMUlS.jpg", 
+    fields: [{
+        name: "Q: How often are the songs updated?",
+        value: "A: Once every 48 hours.  It is worth mentioning that the songs will contain Platinum-only songs, so non-Platinum members get to experience them too.."
+      },
+      {
+        name: "Q: Can we pick the song(s) we want to play?",
+        value: "A: No, the songs are pre-determined and one random song will be chosen for you from the song list."
+      },
+    ],
+    timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "© Example"
+    }
+  }
+}
+};
