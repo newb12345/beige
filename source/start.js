@@ -19,8 +19,8 @@ var embed = new Discord.RichEmbed()
   /*
    * Blank field, useful to create some space.
    */
-  .addBlankField(true)
-  .addField("Inline Field 3", "You can have a maximum of 25 fields.", true);
+ // .addBlankField(true)
+ // .addField("Inline Field 3", "You can have a maximum of 25 fields.", true);
 
 module.exports = Object.freeze({
   embed: {embed}
