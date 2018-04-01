@@ -1,17 +1,13 @@
-// start.js
+// ladder.js
 
 const Discord = require("discord.js");
 
 var embed = new Discord.RichEmbed()
   .setTitle("Ladder")
- // .setAuthor(client.user.username, "https://i.imgur.com/TgNMUlS.jpg")
   .setColor(3447003)
   .setDescription("Ladder FAQ")
   .setFooter("Brought to you by: BlinKcle, weiwei, Steve","https://i.imgur.com/TgNMUlS.jpg")
   .setThumbnail("https://i.imgur.com/TgNMUlS.jpg")
-  /*
-   * Takes a Date object, defaults to current date.
-   */
   .setTimestamp()
   .addField("Q: How often are the songs updated?",
     "A: Once every 48 hours.  It is worth mentioning that the songs will contain Platinum-only songs, so non-Platinum members get to experience them too.", true)
