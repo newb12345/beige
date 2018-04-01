@@ -2,8 +2,8 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 //modules
 const ladder = require("./source/ladder.js");
-/*const roadshow = require("./source/roadshow.js");
-const nhr = require("./source/nhr.js");
+const roadshow = require("./source/roadshow.js");
+/*const nhr = require("./source/nhr.js");
 const club = require("./source/club.js");
 const collection = require("./source/collection.js");
 const events = require("./source/event.js");
