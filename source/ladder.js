@@ -6,7 +6,7 @@ const Discord = require("discord.js");
 var embed = new Discord.RichEmbed()
   .setTitle("Ladder")
   .setColor(3447003)
-  .setDescription("Ladder FAQ")
+  .setDescription("FAQ's about the Ladder")
   .setFooter("Brought to you by: BlinKcle, weiwei, Steve","https://i.imgur.com/TgNMUlS.jpg")
   .setThumbnail("https://i.imgur.com/TgNMUlS.jpg")
   .setTimestamp()
