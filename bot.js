@@ -3,8 +3,8 @@ const client = new Discord.Client();
 //modules
 const ladder = require("./source/ladder.js");
 const roadshow = require("./source/roadshow.js");
-/*const nhr = require("./source/nhr.js");
-const club = require("./source/club.js");
+const nhr = require("./source/nhr.js");
+/*const club = require("./source/club.js");
 const collection = require("./source/collection.js");
 const events = require("./source/event.js");
 const achievements = require("./source/achievements.js");
@@ -49,10 +49,10 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
 		case 'roadshow':   
 	   		message.channel.send(roadshow.embed);
 		    break;
-		/*case 'nhr':    
+		case 'nhr':    
 	   		message.channel.send(nhr.embed);
 		    break;
-		case 'club':    
+		/*case 'club':    
 	   		message.channel.send(club.embed);
 		  	  break;
 		 case 'collection':    
