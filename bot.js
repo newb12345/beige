@@ -1,9 +1,19 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-//sql
-const start = require("./source/start.js");
- 
-
+//modules
+const ladder = require("./source/ladder.js");
+const roadshow = require("./source/roadshow.js");
+const nhr = require("./source/nhr.js");
+const club = require("./source/club.js");
+const collection = require("./source/collection.js");
+const events = require("./source/event.js");
+const achievements = require("./source/achievements.js");
+const training = require("./source/training.js");
+const ranking = require("./source/ranking.js");
+const management = require("./source/management.js");
+const schedule = require("./source/schedule.js");
+const krunkdorm = require("./source/krunkdorm.js");
+const shop = require("./source/shop.js");
 
 
 
@@ -32,57 +42,45 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
   //faq's on ladder  
     switch(command) {
 		case 'ladder': 
-		      message.channel.send(start.embed);
+		      message.channel.send(ladder.embed);
 					     break;
          		//var com = fs.readFileSync("./source/ladder.txt", {"encoding": "utf-8"});
 		    
-		case 'roadshow':    
-         		var com = fs.readFileSync("./source/roadshow.txt", {"encoding": "utf-8"});
-	   		message.channel.send(com);
+		case 'roadshow':   
+	   		message.channel.send(roadshow.embed);
 		    break;
 		case 'nhr':    
-         		var com = fs.readFileSync("./source/nhr.txt", {"encoding": "utf-8"});
-	   		message.channel.send(com);
+	   		message.channel.send(nhr.embed);
 		    break;
 		case 'club':    
-         		var com = fs.readFileSync("./source/club.txt", {"encoding": "utf-8"});
-	   		message.channel.send(com);
+	   		message.channel.send(club.embed);
 		  	  break;
 		 case 'collection':    
-         		var com = fs.readFileSync("./source/collection.txt", {"encoding": "utf-8"});
-	   		message.channel.send(com);
+	   		message.channel.send(collection.embed);
 		   	 break;
 		 case 'events':    
-         		var com = fs.readFileSync("./source/events.txt", {"encoding": "utf-8"});
-	   		message.channel.send(com);
+	   		message.channel.send(events.embed);
 		   	 break;
 		 case 'achievements':    
-         		var com = fs.readFileSync("./source/achievements.txt", {"encoding": "utf-8"});
-	   		message.channel.send(com);
+	   		message.channel.send(achievements.embed);
 		   	 break;
 		 case 'training':    
-         		var com = fs.readFileSync("./source/training.txt", {"encoding": "utf-8"});
-	   		message.channel.send(com);
+	   		message.channel.send(training.embed);
 		   	 break;
 		 case 'ranking':    
-         		var com = fs.readFileSync("./source/ranking.txt", {"encoding": "utf-8"});
-	   		message.channel.send(com);
+	   		message.channel.send(ranking.embed);
 		   	 break;
 		 case 'management':    
-         		var com = fs.readFileSync("./source/management.txt", {"encoding": "utf-8"});
-	   		message.channel.send(com);
+	   		message.channel.send(management.embed);
 		   	 break;   
 	         case 'schedule':    
-         		var com = fs.readFileSync("./source/schedule.txt", {"encoding": "utf-8"});
-	   		message.channel.send(com);
+	   		message.channel.send(schedule.embed);
 		   	 break; 
 		 case 'krunkdorm':    
-         		var com = fs.readFileSync("./source/krunkdorm.txt", {"encoding": "utf-8"});
-	   		message.channel.send(com);
+	   		message.channel.send(krunkdorm.embed);
 		   	 break; 
 		  case 'shop':    
-         		var com = fs.readFileSync("./source/shop.txt", {"encoding": "utf-8"});
-	   		message.channel.send(com);
+	   		message.channel.send(shop.embed);
 		   	 break; 		    
         }
 //help command
