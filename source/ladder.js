@@ -1,4 +1,5 @@
 // ladder.js
+//Make sure that there is a ; at the end of last .addField
 
 const Discord = require("discord.js");
 
