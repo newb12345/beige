@@ -4,7 +4,7 @@ const client = new Discord.Client();
 const ladder = require("./source/ladder.js");
 const roadshow = require("./source/roadshow.js");
 const nhr = require("./source/nhr.js");
-/*const club = require("./source/club.js");
+const club = require("./source/club.js");
 const collection = require("./source/collection.js");
 const events = require("./source/event.js");
 const achievements = require("./source/achievements.js");
@@ -15,7 +15,7 @@ const schedule = require("./source/schedule.js");
 const krunkdorm = require("./source/krunkdorm.js");
 const shop = require("./source/shop.js");
 
-*/
+
 
 var fs = require('fs');
 
@@ -52,7 +52,7 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
 		case 'nhr':    
 	   		message.channel.send(nhr.embed);
 		    break;
-		/*case 'club':    
+		case 'club':    
 	   		message.channel.send(club.embed);
 		  	  break;
 		 case 'collection':    
@@ -83,7 +83,7 @@ const categ = ["ladder", "club", "roadshow","ranking","krunk-dorm", "others"];
 	   		message.channel.send(shop.embed);
 		   	 break; 		
 			 
-			 */
+			/ */
         }
 //help command
       if(command === "h") {
